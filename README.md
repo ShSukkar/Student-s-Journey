@@ -1,6 +1,4 @@
-Schools Network
-
-Studants tsransfer in schools. Save and show students information and transfer students between participants(schools).
+Schools Network (Using Hyperledger Fabric with Composer )
 
 This business network defines:
 
@@ -43,10 +41,7 @@ https://hyperledger.github.io/composer/latest/installing/development-tools.html
 5- To start the business network rung the following command (takes 1 - 3 minutes): 
    composer  network start --networkName schools-network --networkVersion 0.0.1 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file networkadmin.card
 
-
 ![3](https://user-images.githubusercontent.com/36267291/40788118-f4003878-64f7-11e8-88d5-93d403cf0423.png)
-
-
 
 6- To import the network administrator identity as a usable business network card, run the following command:
    composer card import --file networkadmin.card
@@ -59,6 +54,7 @@ https://hyperledger.github.io/composer/latest/installing/development-tools.html
 ![5](https://user-images.githubusercontent.com/36267291/40788239-46c8888a-64f8-11e8-9135-d2d3b7b8edd1.png)
 
 **To create the REST API, run the following command:**
+
    composer-rest-server
    
    and then answer the questions that will appear as the following :
@@ -79,12 +75,10 @@ https://hyperledger.github.io/composer/latest/installing/development-tools.html
   
    
    **The Last step:**
-       Navegate to school-app 
-       then run the following command:
+       Navegate to school-app.
+       then run the following command and you will be able use the network :
        npm start
        This will start the angular application running against your REST API at http://localhost:4200 .
-       
-       and you will be able use the network.
 
 
 
