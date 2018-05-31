@@ -82,8 +82,7 @@ https://hyperledger.github.io/composer/latest/installing/development-tools.html
        Navegate to school-app 
        then run the following command:
        npm start
-       This will start the angular application running against your REST API at 
-        http://localhost:4200 .
+       This will start the angular application running against your REST API at http://localhost:4200 .
        
        and you will be able use the network.
 
