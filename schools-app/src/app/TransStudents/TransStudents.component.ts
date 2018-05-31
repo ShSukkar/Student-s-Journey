@@ -12,16 +12,17 @@
  * limitations under the License.
  */
 
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, transition } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { TransStudentsService } from './TransStudents.service';
+import { StudentsService } from '../Students/Students.service';
 import 'rxjs/add/operator/toPromise';
 
 @Component({
   selector: 'app-transstudents',
   templateUrl: './TransStudents.component.html',
   styleUrls: ['./TransStudents.component.css'],
-  providers: [TransStudentsService]
+  providers: [TransStudentsService, StudentsService]
 })
 export class TransStudentsComponent implements OnInit {
 
@@ -38,7 +39,7 @@ export class TransStudentsComponent implements OnInit {
   timestamp = new FormControl('', Validators.required);
 
 
-  constructor(private serviceTransStudents: TransStudentsService, fb: FormBuilder) {
+  constructor(private serviceTransStudents: TransStudentsService, private serviceStudents: TransStudentsService, fb: FormBuilder) {
     this.myForm = fb.group({
       student: this.student,
       NewSchool: this.NewSchool,
@@ -49,18 +50,33 @@ export class TransStudentsComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadAll();
+    
   }
 
+ 
   loadAll(): Promise<any> {
+
+    var that=this
     const tempList = [];
     return this.serviceTransStudents.getAll()
     .toPromise()
     .then((result) => {
       this.errorMessage = null;
       result.forEach(transaction => {
+        console.log(transaction["student"].toString().slice(37))
+        
+        that.serviceStudents.getName(transaction["student"].toString().slice(37))
+          .toPromise()
+          .then((result1) => {
+            console.log(result1)
+            transaction["name"] = result1.FullName
+          })
+          .catch((error) => { })
         tempList.push(transaction);
       });
       this.allTransactions = tempList;
+     
+      console.log(this.allTransactions)
     })
     .catch((error) => {
       if (error === 'Server error') {
@@ -71,6 +87,7 @@ export class TransStudentsComponent implements OnInit {
         this.errorMessage = error;
       }
     });
+    
   }
 
 	/**
