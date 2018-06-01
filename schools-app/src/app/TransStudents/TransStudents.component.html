@@ -10,34 +10,18 @@
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
-
-
-
-
-
           <div class="form-group text-left">
             <label for="student">Student ID</label>
-
             <textarea formControlName="student" class="form-control" rows="3"></textarea>
-
           </div>
-
-
-
-
           <div class="form-group text-left">
             <label for="NewSchool">New School</label>
-
             <textarea formControlName="NewSchool" class="form-control" rows="3"></textarea>
-
           </div>
-
-
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
           <button (click)="addTransaction(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
-
         </div>
       </form>
     </div>
@@ -58,10 +42,29 @@
   <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
     <strong>Error:</strong> {{errorMessage}}
   </div>
+  <div class="row">
+    <div class="col-md-4">  
+    </div>
+    <div class="col-md-2 marg">
+      <label for="student" >Student ID  </label>
+        <input id="studentName" type="number" step='any'  (keyup)="onKey($event)">
+    </div>
+  <div class="col-md-3">
+    <button (click)="loadStudentTransaction()" type="button" class="btn btn-Student">
+      Choose Student
+    </button>
+  </div>
+  <div class="col-md-3">
+    <button (click)="loadAll()" type="button" class="btn btn-primary">
+    
+     Get All Transfers
+    </button>
+  </div>
+  </div>
 
   <div class="row">
     <div class="col-md-9">
-      <h1 class="transaction-title" id='transactionName'>Transfer</h1>
+      <h1 class="transaction-title" id='transactionName'>Students journey</h1>
     </div>
     <div class="col-md-3">
       <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTransactionModal">
@@ -99,7 +102,7 @@
             <td class="transaction-properties">{{transaction.name}}</td>
             <td class="transaction-properties">{{transaction.NewSchool ? transaction.NewSchool.slice(35) : transaction.NewSchool}}</td>
             <td class="transaction-properties">{{transaction.transactionId}}</td>
-            <td class="transaction-properties">{{transaction.timestamp}}</td>
+            <td class="transaction-properties">{{transaction.timestamp | date:'short'}}</td>
 
 
           </tr>

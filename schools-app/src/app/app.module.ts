@@ -27,13 +27,15 @@ import { SchoolComponent } from './School/School.component';
 
 import { TransStudentsComponent } from './TransStudents/TransStudents.component';
 
+
   @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     StudentsComponent,
     SchoolComponent,
-    TransStudentsComponent
+    TransStudentsComponent,
+   
   ],
   imports: [
     BrowserModule,
