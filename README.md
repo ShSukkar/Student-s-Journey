@@ -39,7 +39,7 @@ https://hyperledger.github.io/composer/latest/installing/development-tools.html
 ![2](https://user-images.githubusercontent.com/36267291/40788099-ea687d2a-64f7-11e8-9be2-95a1b453166f.png)
 
 5- To start the business network rung the following command (takes 1 - 3 minutes): 
-   composer  network start --networkName schools-network --networkVersion 0.0.1 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file networkadmin.card
+   composer  network start --networkName schools-network --networkVersion 1.0.0 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file networkadmin.card
 
 ![3](https://user-images.githubusercontent.com/36267291/40788118-f4003878-64f7-11e8-88d5-93d403cf0423.png)
 
