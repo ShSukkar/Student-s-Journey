@@ -44,8 +44,13 @@ export class DataService<Type> {
             .map(this.extractData)
             .catch(this.handleError);
     }
-
-
+   
+     public getTransForStudent(ns: string, id: string): Observable<Type[]> {
+            console.log('GetSingle ' + ns);
+         return this.http.get(this.actionUrl + "queries/" + "selectTransferByStudent?student=resource%3Aorg.schoolsnetwork.Students%23" + id )
+                .map(this.extractData)
+                .catch(this.handleError);
+        }
     public getSingle(ns: string, id: string): Observable<Type> {
         console.log('GetSingle ' + ns);
 

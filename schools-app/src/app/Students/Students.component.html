@@ -347,8 +347,8 @@
                 <td class="asset-properties">{{asset.GPA}}</td>
             
                 <td class="asset-properties">{{asset.Status}}</td>
-            
-                <td class="asset-properties">{{asset.CurrentSchool}}</td>
+           
+                <td class="asset-properties">{{asset.CurrentSchool ? asset.CurrentSchool.slice(35) : asset.CurrentSchool}}</td>
             
             <td>
               <button (click)="getForm(asset.StudentId);" type="button" class="btn btn-update" data-toggle="modal" data-target="#updateAssetModal">

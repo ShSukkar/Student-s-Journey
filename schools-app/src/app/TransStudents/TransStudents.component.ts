@@ -32,7 +32,7 @@ export class TransStudentsComponent implements OnInit {
   private Transaction;
   private currentId;
   private errorMessage;
-
+  private StudentName;
   student = new FormControl('', Validators.required);
   NewSchool = new FormControl('', Validators.required);
   transactionId = new FormControl('', Validators.required);
@@ -89,6 +89,46 @@ export class TransStudentsComponent implements OnInit {
     });
     
   }
+  loadStudentTransaction(): Promise<any> {
+
+    var that = this
+    const tempList = [];
+    console.log(this.allTransactions);
+    console.log(this.StudentName);
+    return this.serviceTransStudents.getTransactionByStudent(this.StudentName)
+      .toPromise()
+      .then((result) => {
+        this.errorMessage = null;
+        console.log(result);
+        console.log(result[0])
+        
+        result.forEach(transaction => {
+          console.log(transaction["student"].toString().slice(37))
+
+          that.serviceStudents.getName(transaction["student"].toString().slice(37))
+            .toPromise()
+            .then((result1) => {
+              console.log(result1)
+              transaction["name"] = result1.FullName
+            })
+            .catch((error) => { })
+          tempList.push(transaction);
+        });
+        this.allTransactions = tempList;
+
+        console.log(this.allTransactions)
+      })
+      .catch((error) => {
+        if (error === 'Server error') {
+          this.errorMessage = 'Could not connect to REST server. Please check your configuration details';
+        } else if (error === '404 - Not Found') {
+          this.errorMessage = '404 - Could not find API route. Please check your available APIs.';
+        } else {
+          this.errorMessage = error;
+        }
+      });
+
+  }
 
 	/**
    * Event handler for changing the checked state of a checkbox (handles array enumeration values)
@@ -141,6 +181,7 @@ export class TransStudentsComponent implements OnInit {
         'transactionId': null,
         'timestamp': null
       });
+      this.loadAll();
     })
     .catch((error) => {
       if (error === 'Server error') {
@@ -256,4 +297,8 @@ export class TransStudentsComponent implements OnInit {
       'timestamp': null
     });
   }
+  onKey(event) { 
+    const inputValue = event.target.value;
+    this.StudentName = inputValue;}
 }
+

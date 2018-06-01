@@ -25,6 +25,7 @@ export class TransStudentsService {
 
   private NAMESPACE = 'TransStudents';
   private NAMESPACEStudent = 'Students';
+  private NAMESPACEQuery = 'Query';
 
   constructor(private dataService: DataService<TransStudents>, private dataService2: DataService<Students>) {
   };
@@ -39,6 +40,9 @@ export class TransStudentsService {
   
   public getTransaction(id: any): Observable<TransStudents> {
     return this.dataService.getSingle(this.NAMESPACE, id);
+  }
+  public getTransactionByStudent(id: any): Observable<TransStudents[]> {
+    return this.dataService.getTransForStudent(this.NAMESPACE, id);
   }
 
   public addTransaction(itemToAdd: any): Observable<TransStudents> {

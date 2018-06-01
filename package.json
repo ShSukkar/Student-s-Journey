@@ -3,7 +3,7 @@
     "composer": "^0.19.0"
   },
   "name": "schools-network",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "description": "Schools Network",
   "scripts": {
     "prepublish": "mkdirp ./dist && composer archive create --sourceType dir --sourceName . -a ./dist/schools-network.bna",
