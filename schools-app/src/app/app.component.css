@@ -11,14 +11,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-.container-fluid {
+.container {
     display: grid;
-    margin-left: 72px;
+    margin-left: 430px;
     padding-left: 0px;
 }
 
 .navbar {
-    border-radius: 0px;
+    border-radius: 10px;
     background: #F3F3F3;
     border: none;
 }
@@ -26,39 +26,40 @@
 .navbar-header {
     margin-top: 40px;
     margin-bottom: 30px;
+    margin-right: 40px;
+}
+
+#dr {
+    border-radius: 5px;
 }
 
 .navbar-brand {
     height: 100%;
-    font-size: 32px;
+    font-size: 46px;
     letter-spacing: 0.28px;
     padding: 0px;
-    margin-left: 0px !important;
+    margin-left: -67px !important;
     color: #000;
+    font-family: Orbitron;
+    text-align: center;
 }
 
 .navbar-brand:hover {
-    color: #000;
-}
-
-.network-name {
-    font-size: 12px;
-    letter-spacing: 0.28px;
-    color: #5D636A;
-}
-.network-name:hover{
-    letter-spacing: 2px;
+    color: rgb(120, 203, 241);
+    font-family: Orbitron;
 }
 
 .navbar-nav > li {
     margin-right: 12px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .navbar-nav > a {
     font-size: 14px;
     color: #343C41;
     letter-spacing: 0.2px;
+    border-radius: 5px;
 }
 
 .navbar-nav > li:hover {
@@ -73,7 +74,7 @@
 }
 
 .navbar-nav > li > .active:hover > a {
-    color: #6C4CC4 !important;
+    color: rgb(51, 7, 172) !important;
 }
 
 .navbar-nav > li:hover > a {
@@ -82,13 +83,14 @@
 
 .navbar-nav .active > a {
     background-color: #fff;
-    color: #6C4CC4 !important;
+    color: rgb(187, 1, 1) !important;
 }
 
 .dropdown-menu {
-    border-radius: 0px;
+    border-radius: 10px;
     border: none;
     padding: 0px;
+    margin-left: -32px;
     box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.10);
     max-height: 0;
     display: block;
@@ -109,31 +111,31 @@
 .dropdown-menu > li > a {
     padding: 6px 12px;
     font-size: 14px;
-    color: #343C41;
+    color: rgb(100, 100, 100);
     letter-spacing: 0.2px;
     line-height: 30px;
 }
 
 .dropdown-menu > li:hover > a {
-    background-color: rgb(230, 214, 255);
+    background-color: rgb(11, 0, 165);
 }
 
 .dropdown-menu > li:focus > a {
-    background-color: #F3ECFE;
+    background-color: rgb(55, 0, 145);
 }
 
 .dropdown-menu > li > a:visited {
-    background-color: #F3ECFE;
+    background-color: rgb(226, 211, 250);
 }
 
 .dropdown-menu > li > a:active {
-    background-color: #F3ECFE;
+    background-color: rgb(226, 211, 250);
 }
 .dropdown-menu > li > a:focus {
-    background-color: #F3ECFE;
+    background-color: rgb(226, 211, 250);
 }
 .dropdown-menu > li > a:visited {
-    background-color: #F3ECFE;
+    background-color: rgb(226, 211, 250);
 }
 
 .dropdown:hover .dropdown-menu {

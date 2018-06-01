@@ -20,7 +20,6 @@
     margin-top: 30px;
 }
 .btn-primary {
-    background: #844AE4;
     border-radius: 4px;
     border: 0px;
     font-size: 14px;
@@ -28,7 +27,7 @@
     letter-spacing: 0;
     line-height: 10px;
     height: 40px;
-    width: 153px;
+    width: 155px;
     float: right;
     margin-top: 5%;
 }
@@ -101,9 +100,7 @@ label {
 
 }
 .btn-default {
-    color: #844EF4;
     background-color: #ffffff;
-    border-color: #844EF4;
     border-radius: 4px;
     width: 76px;
     height: 40px;
@@ -122,19 +119,13 @@ label {
 }
 .btn-success {
     color: #ffffff;
-    background-color: #844AE4;
-    border-color: #844AE4;
     border-radius: 4px;
     width: 76px;
     height: 40px;
 }
-.btn-success:focus{
-    background-color: #4D21A8;
-    border-color: #4D21A8;
-}
+
 .btn-default:focus{
     background-color: #fff;
-    border-color: #4d21a8;  
     color: #4d21a8;      
 }
 .transaction-title{
