@@ -1,4 +1,4 @@
-Student's Journey (Using Hyperledger Fabric Composer)
+**Student's Journey** (Using Hyperledger Fabric Composer)
 
 The business network of this application defines:
 
