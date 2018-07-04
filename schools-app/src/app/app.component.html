@@ -11,10 +11,16 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
+<div>
+    <div>
+        <video  preload="" muted="" autoplay="" loop="">
+            <source src="https://static.videezy.com/system/resources/previews/000/007/313/original/Plexus.mp4" type="video/mp4">
+          </video>
+    </div>
 <nav class="navbar navbar-inverse">
     <div class="container">
       <div class="navbar-header">
-        <p class="navbar-brand">Schools Network</p>
+        <p class="navbar-brand">Students Journey</p>
       </div>
       <ul class="nav navbar-nav nav-center">
         <li class="dropdown active">
@@ -29,7 +35,8 @@
           <a class="dropdown-toggle" id="dr" data-toggle="dropdown">Participants</a>
           <ul class="dropdown-menu scrollable-menu">
             
-            <li><a [routerLink]="['/School']">School</a></li>
+            <li><a [routerLink]="['/School']">Schools</a></li>
+            <li><a [routerLink]="['/Universities']">Universities</a></li>
             
           </ul>
       </li>
@@ -37,12 +44,12 @@
         <a class="dropdown-toggle" id="dr" data-toggle="dropdown">Transactions</a>
         <ul class="dropdown-menu scrollable-menu">
           
-          <li><a [routerLink]="['/TransStudents']">TransStudents</a></li>
+          <li><a [routerLink]="['/TransStudents']">Transfer Students</a></li>
           
         </ul>
     </li>
       </ul>
     </div>
   </nav>
-  
+</div>
   <router-outlet></router-outlet>

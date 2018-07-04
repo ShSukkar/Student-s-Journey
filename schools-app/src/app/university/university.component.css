@@ -11,13 +11,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-.container {
+ .container {
     width: 100%;
     padding-left: 72px;
     padding-right: 72px;
-}
-.marg{
-    margin-top: 30px;
 }
 
 .btn-primary {
@@ -28,12 +25,11 @@
     letter-spacing: 0;
     line-height: 10px;
     height: 40px;
-    width: 155px;
-   
-}
-.btn-Student {
+    width: 130px;
     float: right;
+    margin-top: 5%;
 }
+
 .table > thead > tr > th {
     border-bottom: 1px solid #EAEAEA;
 }
@@ -114,12 +110,14 @@ label {
     width: 76px;
     height: 40px;
 }
-
-.btn-default:focus{
-    background-color: #fff;
-    color: #4d21a8;      
+.btn-success:hover{
+    background-color: rgb(0, 167, 0);
+    border-color:  rgb(0, 167, 0);
 }
-.transaction-title{
+.btn-default:focus{
+    background-color: #fff;     
+}
+.asset-title{
     font-family: inherit;
     font-size: 24px;
     color: #4E4E4E;
@@ -141,7 +139,7 @@ label {
     line-height: 24px;
     padding-left: 24px;
 }
-.transaction-properties{
+.asset-properties{
     font-family: inherit;
     font-size: 14px;
     color: #848484;
@@ -156,7 +154,7 @@ label {
     fill: currentColor;
 }
 
-/***.transaction-properties:hover, .transaction-properties:hover span{  
+/***.asset-properties:hover, .asset-properties:hover span{  
 overflow: visible;
 position: relative;
  make readable design 
@@ -168,6 +166,3 @@ padding: 3px;
 margin-left: -4px;
 }
 ***/
-
-
-

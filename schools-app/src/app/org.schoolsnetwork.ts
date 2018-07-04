@@ -15,6 +15,7 @@ import {Event} from './org.hyperledger.composer.system';
       GPA: number;
       Status: StudentStatus;
       CurrentSchool: School;
+      newUniversity:University;
    }
    export class School extends Participant {
       Name: string;
@@ -22,8 +23,15 @@ import {Event} from './org.hyperledger.composer.system';
       PhoneNumber: number;
       Adress: string;
    }
+   export class University extends Participant {
+    universityName: string;
+    Email: string;
+    Adress: string;
+   } 
    export class TransStudents extends Transaction {
       student: Students;
       NewSchool: School;
+      newUniversity:University;
    }
+
 // }

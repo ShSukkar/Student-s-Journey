@@ -34,7 +34,8 @@ export class TransStudentsComponent implements OnInit {
   private errorMessage;
   private StudentName;
   student = new FormControl('', Validators.required);
-  NewSchool = new FormControl('', Validators.required);
+  newUniversity = new FormControl('');
+  NewSchool = new FormControl('');
   transactionId = new FormControl('', Validators.required);
   timestamp = new FormControl('', Validators.required);
 
@@ -43,6 +44,7 @@ export class TransStudentsComponent implements OnInit {
     this.myForm = fb.group({
       student: this.student,
       NewSchool: this.NewSchool,
+      newUniversity: this.newUniversity,
       transactionId: this.transactionId,
       timestamp: this.timestamp
     });
@@ -159,13 +161,18 @@ export class TransStudentsComponent implements OnInit {
     this.Transaction = {
       $class: 'org.schoolsnetwork.TransStudents',
       'student': "resource:org.schoolsnetwork.Students#" + this.student.value,
-      'NewSchool': this.NewSchool.value,
       'transactionId': this.transactionId.value,
       'timestamp': this.timestamp.value
     };
-
+    if(this.NewSchool.value){
+      this.Transaction['NewSchool']= this.NewSchool.value;
+    }
+    if(this.newUniversity.value){
+      this.Transaction['newUniversity']= this.newUniversity.value;
+    }
     this.myForm.setValue({
       'student': null,
+      'newUniversity': null,
       'NewSchool': null,
       'transactionId': null,
       'timestamp': null
@@ -177,6 +184,7 @@ export class TransStudentsComponent implements OnInit {
       this.errorMessage = null;
       this.myForm.setValue({
         'student': null,
+        'newUniversity': null,
         'NewSchool': null,
         'transactionId': null,
         'timestamp': null
@@ -245,6 +253,7 @@ export class TransStudentsComponent implements OnInit {
     .then((result) => {
       this.errorMessage = null;
       const formObject = {
+        'newUniversity': null,
         'student': null,
         'NewSchool': null,
         'transactionId': null,
@@ -257,6 +266,11 @@ export class TransStudentsComponent implements OnInit {
         formObject.student = null;
       }
 
+      if (result.newUniversity) {
+        formObject.newUniversity = result.newUniversity;
+      } else {
+        formObject.newUniversity = null;
+      }
       if (result.NewSchool) {
         formObject.NewSchool = result.NewSchool;
       } else {
@@ -291,6 +305,7 @@ export class TransStudentsComponent implements OnInit {
 
   resetForm(): void {
     this.myForm.setValue({
+      'newUniversity': null,
       'student': null,
       'NewSchool': null,
       'transactionId': null,

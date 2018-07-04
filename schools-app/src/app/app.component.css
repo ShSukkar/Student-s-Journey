@@ -38,7 +38,7 @@
     font-size: 46px;
     letter-spacing: 0.28px;
     padding: 0px;
-    margin-left: -67px !important;
+    margin-left: 70px !important;
     color: #000;
     font-family: Orbitron;
     text-align: center;
@@ -147,3 +147,4 @@
     max-height: 200px;
     overflow-x: hidden;
 }
+

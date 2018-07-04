@@ -26,6 +26,7 @@ import { StudentsComponent } from './Students/Students.component';
 import { SchoolComponent } from './School/School.component';
 
 import { TransStudentsComponent } from './TransStudents/TransStudents.component';
+import { UniversityComponent } from './university/university.component';
 
 
   @NgModule({
@@ -35,6 +36,7 @@ import { TransStudentsComponent } from './TransStudents/TransStudents.component'
     StudentsComponent,
     SchoolComponent,
     TransStudentsComponent,
+    UniversityComponent
    
   ],
   imports: [
