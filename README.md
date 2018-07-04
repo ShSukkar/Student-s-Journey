@@ -92,6 +92,7 @@ composer archive create -t dir -n .
        
 
 **Credits**
+
 Project's authers are:
 - [Atheer](https://github.com/Atheer83)
 - [Dareen](https://github.com/dareenkhanash)
@@ -100,4 +101,5 @@ Project's authers are:
 - [Shatha](https://github.com/ShSukkar)
 
 **License**
-Apache License, Version 2.0 [the "License"] (http://www.apache.org/licenses/LICENSE-2.0)
+
+Apache License, Version 2.0 [the License] (http://www.apache.org/licenses/LICENSE-2.0)
