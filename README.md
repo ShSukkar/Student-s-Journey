@@ -53,10 +53,10 @@ https://github.com/RbkCrypto/Schools-Network
 <img src="https://user-images.githubusercontent.com/36267291/40788118-f4003878-64f7-11e8-88d5-93d403cf0423.png" width="600" height="400" />
 6. To import the network administrator identity as a usable business network card, run the following command:
    `composer card import --file networkadmin.card`
-<img src="https://user-images.githubusercontent.com/36267291/40788133-0059b04a-64f8-11e8-8407-9779abf35a35.png" width="600" height="400" />
+<img src="https://user-images.githubusercontent.com/36267291/40788133-0059b04a-64f8-11e8-8407-9779abf35a35.png" width="700" height="400" />
 7. To check if the business network has been deployed successfully, run the following command to ping the network: 
    `composer network ping --card admin@schools-network`
-<img src="https://user-images.githubusercontent.com/36267291/40788239-46c8888a-64f8-11e8-9135-d2d3b7b8edd1.png" width="600" height="400" />
+<img src="https://user-images.githubusercontent.com/36267291/40788239-46c8888a-64f8-11e8-9135-d2d3b7b8edd1.png" width="700" height="400" />
 
 ### To create the REST API, run the following command:
    `composer-rest-server`
