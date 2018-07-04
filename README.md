@@ -1,6 +1,10 @@
-**Student's Journey** (Using Hyperledger Fabric Composer)
+**Student's Journey**
 
-The business network of this application defines:
+This web application mainly is a distributed ledger for students records. It enables schools, universities and companies to track the student’s journey of transfering from one school to another, or from a school to a university or from university to companies.
+It has been developed using blockchain technology (Hyperledger Fabric Composer), including Anglar4, express and couchDB. 
+
+
+For models directory, it defines the business network of this application which includes:
 
 **Participant**
 `Schools`
@@ -11,6 +15,11 @@ The business network of this application defines:
 
 **Transaction**
 `Transfer Students from one school to another, or from a school to a university, or from a university to another`
+
+For lib directory, it includes the logic file which defines the logic of trasnferring process for a student.
+
+The client folder is **schools-app** generally, **chools-app/src/app/** specifically.
+It includes mainly the following components: School, university, Students, TransStudents.
 
 
 **In order to test the network on your local machine:**
@@ -34,13 +43,13 @@ composer archive create -t dir -n .
 ![1](https://user-images.githubusercontent.com/36267291/40787989-a253335e-64f7-11e8-9d31-e96a4ba518eb.png)
 
 4- Install the business network using this command:
-   composer network install --card PeerAdmin@hlfv1 --archiveFile schools-network@1.0.0.bna
+   composer network install --card PeerAdmin@hlfv1 --archiveFile schools-network@0.0.8.bna
    Note: schools-network is the name of this app network, you can name it as you prefer.
 
 ![2](https://user-images.githubusercontent.com/36267291/40788099-ea687d2a-64f7-11e8-9be2-95a1b453166f.png)
 
 5- To start the business network run the following command (takes 1 - 3 minutes): 
-   composer  network start --networkName schools-network --networkVersion 1.0.0 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file networkadmin.card
+   composer  network start --networkName schools-network --networkVersion 0.0.8 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file networkadmin.card
 
 ![3](https://user-images.githubusercontent.com/36267291/40788118-f4003878-64f7-11e8-88d5-93d403cf0423.png)
 
@@ -80,3 +89,15 @@ composer archive create -t dir -n .
        then run the following command and the network will be ready to be used:
        `npm start`
        This will start the angular application running against your REST API at http://localhost:4200
+       
+
+**Credits**
+Project's authers are:
+- (Atheer)[https://github.com/Atheer83]
+- (Dareen)[https://github.com/dareenkhanash]
+- (Hamzah)[https://github.com/HamzaAlwan]
+- (Livia)[https://github.com/Elena-Livia]
+- (Shatha)[https://github.com/ShSukkar]
+
+**License**
+Apache License, Version 2.0 (the "License") [http://www.apache.org/licenses/LICENSE-2.0]
