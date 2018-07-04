@@ -42,8 +42,8 @@ https://github.com/RbkCrypto/Schools-Network
 composer archive create -t dir -n .
    
 
-![1](https://user-images.githubusercontent.com/36267291/40787989-a253335e-64f7-11e8-9d31-e96a4ba518eb.png | width=400)
-
+![1](https://user-images.githubusercontent.com/36267291/40787989-a253335e-64f7-11e8-9d31-e96a4ba518eb.png)
+<img src="https://user-images.githubusercontent.com/36267291/40787989-a253335e-64f7-11e8-9d31-e96a4ba518eb.png" width="100" height="100" />
 4. Install the business network using this command:
    composer network install --card PeerAdmin@hlfv1 --archiveFile schools-network@0.0.8.bna
    Note: schools-network is the name of this app network, you can name it as you prefer.
