@@ -1,8 +1,6 @@
 # Student's Journey
 This web application mainly is a distributed ledger for students records. It enables schools, universities and companies to track the student’s journey of transfering from one school to another, or from a school to a university or from university to companies.
 It has been developed using blockchain technology (Hyperledger Fabric Composer), including Anglar4, express and couchDB. 
-
-## Contents
 For models directory, it defines the business network of this application which includes:
 
 **Participant**
@@ -25,6 +23,15 @@ For lib directory, it includes the logic file which defines the logic of trasnfe
 
 The client folder is **schools-app** generally, **chools-app/src/app/** specifically.
 It includes mainly the following components: School, university, Students, TransStudents.
+
+## Table of Contents
+1. [Getting Started](#Getting-Started)
+  1. [In order to test the network on your local machine](#In order to test the network on your local machine:)
+  1. [To create the REST API, run the following command:](#To create the REST API, run the following command:)
+  1. [The Last step:](#The Last step:)
+1. Credits
+  1. [Project's authers](#Project's authers)
+1. License
 
 ## Getting Started
 ### In order to test the network on your local machine:
