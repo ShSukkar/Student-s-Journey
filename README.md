@@ -1,45 +1,44 @@
-**Student's Journey** (Using Hyperledger Fabric Composer)
+Schools Network (Using Hyperledger Fabric with Composer )
 
-The business network of this application defines:
+This business network defines:
 
 **Participant**
 `Schools`
-`Universities`
 
 **Asset**
 `Students`
 
 **Transaction**
-`Transfer Students from one school to another, or from a school to a university, or from a university to another`
+`Transfare Students`
+
+`Schools` participants are able to have `Students` assets and transfer these with `TransferStudents` transaction.
 
 
-**In order to test the network on your local machine:**
 
-First, install the pre-requisites by executing the commands on this page:
+**To test the network on your local machine:**
+
+First, Install the pre-requisites by following the commands on this page:
 https://hyperledger.github.io/composer/latest/installing/installing-prereqs.html
 
-Second, install the development environment by executing the commands on this page:
+Second, Install the development environment by following the commands on this page:
 https://hyperledger.github.io/composer/latest/installing/development-tools.html
  
-Third, follow the below steps:
-1- Clone or download the Schools-Network repo:
-https://github.com/RbkCrypto/Schools-Network
+**Third by following these steps:**
+1- Clone or download the repository
 
-2- Navigate in terminal to the repo location on your machine. 
+2- Navigate to the to the repository folder 
 
-3- The network should be packaged into a deployable archive by executing the command below, which will create the bna file in the current folder: 
-composer archive create -t dir -n .
-   
+3- The network should be packeged into a deployable archive using this command: 
+   composer archive create -t dir -n .
 
 ![1](https://user-images.githubusercontent.com/36267291/40787989-a253335e-64f7-11e8-9d31-e96a4ba518eb.png)
 
 4- Install the business network using this command:
    composer network install --card PeerAdmin@hlfv1 --archiveFile schools-network@1.0.0.bna
-   Note: schools-network is the name of this app network, you can name it as you prefer.
 
 ![2](https://user-images.githubusercontent.com/36267291/40788099-ea687d2a-64f7-11e8-9be2-95a1b453166f.png)
 
-5- To start the business network run the following command (takes 1 - 3 minutes): 
+5- To start the business network rung the following command (takes 1 - 3 minutes): 
    composer  network start --networkName schools-network --networkVersion 1.0.0 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file networkadmin.card
 
 ![3](https://user-images.githubusercontent.com/36267291/40788118-f4003878-64f7-11e8-88d5-93d403cf0423.png)
@@ -58,7 +57,7 @@ composer archive create -t dir -n .
 
    composer-rest-server
    
-   and then answer the questions that will appear as following :
+   and then answer the questions that will appear as the following :
    
    1- Enter admin@schools-network as the card name.
    
@@ -76,7 +75,12 @@ composer archive create -t dir -n .
   
    
    **The Last step:**
-       Navigate to school-app which is the client application (Angular4),
-       then run the following command and the network will be ready to be used:
-       `npm start`
-       This will start the angular application running against your REST API at http://localhost:4200
+       Navegate to school-app.
+       then run the following command and you will be able use the network :
+       npm start
+       This will start the angular application running against your REST API at http://localhost:4200 .
+
+
+
+Congratulations!
+
