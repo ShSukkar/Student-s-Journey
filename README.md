@@ -60,14 +60,14 @@ composer archive create -t dir -n .
 
 ![4](https://user-images.githubusercontent.com/36267291/40788133-0059b04a-64f8-11e8-8407-9779abf35a35.png)
 
-7- To check if the business network has been deployed successfully, run the following command to ping the network: 
+7. To check if the business network has been deployed successfully, run the following command to ping the network: 
    composer network ping --card admin@schools-network
 
 ![5](https://user-images.githubusercontent.com/36267291/40788239-46c8888a-64f8-11e8-9135-d2d3b7b8edd1.png)
 
 ### To create the REST API, run the following command:
 
-   composer-rest-server
+   `composer-rest-server`
    
    and then answer the questions that will appear as following :
    
@@ -87,10 +87,8 @@ composer archive create -t dir -n .
   
    
 ### The Last step:
-    Navigate to school-app which is the client application (Angular4),
-    then run the following command and the network will be ready to be used:
-    `npm start`
-    This will start the angular application running against your REST API at http://localhost:4200
+Navigate to school-app which is the client application (Angular4), then run the following command and the network will be ready to be used: `npm start`
+This will start the angular application running against your REST API at http://localhost:4200
 
 
 ## Credits
@@ -103,4 +101,4 @@ Project's authers are:
 
 ## License
 
-Apache License, Version 2.0 [the License] (http://www.apache.org/licenses/LICENSE-2.0)
+Apache License, Version 2.0 [the License](http://www.apache.org/licenses/LICENSE-2.0)
