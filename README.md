@@ -48,16 +48,16 @@ https://github.com/RbkCrypto/Schools-Network
 4. Install the business network using this command:
    composer network install --card PeerAdmin@hlfv1 --archiveFile schools-network@0.0.8.bna
    Note: schools-network is the name of this app network, you can name it as you prefer.
-<img src="https://user-images.githubusercontent.com/36267291/40788099-ea687d2a-64f7-11e8-9be2-95a1b453166f.png" width="500" height="400" />
+<img src="https://user-images.githubusercontent.com/36267291/40788099-ea687d2a-64f7-11e8-9be2-95a1b453166f.png" width="600" height="400" />
 5. To start the business network run the following command (takes 1 - 3 minutes): 
    composer  network start --networkName schools-network --networkVersion 0.0.8 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file networkadmin.card
-<img src="https://user-images.githubusercontent.com/36267291/40788118-f4003878-64f7-11e8-88d5-93d403cf0423.png" width="500" height="400" />
+<img src="https://user-images.githubusercontent.com/36267291/40788118-f4003878-64f7-11e8-88d5-93d403cf0423.png" width="600" height="400" />
 6. To import the network administrator identity as a usable business network card, run the following command:
    composer card import --file networkadmin.card
-<img src="https://user-images.githubusercontent.com/36267291/40788133-0059b04a-64f8-11e8-8407-9779abf35a35.png" width="500" height="400" />
+<img src="https://user-images.githubusercontent.com/36267291/40788133-0059b04a-64f8-11e8-8407-9779abf35a35.png" width="600" height="400" />
 7. To check if the business network has been deployed successfully, run the following command to ping the network: 
    composer network ping --card admin@schools-network
-<img src="https://user-images.githubusercontent.com/36267291/40788239-46c8888a-64f8-11e8-9135-d2d3b7b8edd1.png" width="500" height="400" />
+<img src="https://user-images.githubusercontent.com/36267291/40788239-46c8888a-64f8-11e8-9135-d2d3b7b8edd1.png" width="600" height="400" />
 ### To create the REST API, run the following command:
 
    `composer-rest-server`
