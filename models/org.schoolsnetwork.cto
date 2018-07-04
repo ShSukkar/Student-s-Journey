@@ -17,7 +17,8 @@ asset Students identified by StudentId {
   o String Grade
   o Double GPA
   o StudentStatus Status
-  --> School CurrentSchool
+  --> School CurrentSchool optional
+  --> University currentUniversity optional
 }
 
 participant School identified by Name {
@@ -27,7 +28,14 @@ participant School identified by Name {
   o String Adress
 }
 
+participant University identified by universityName {
+  o String universityName
+  o String Email
+  o String Adress
+}
+
 transaction TransStudents {
   --> Students student
-  --> School NewSchool
+  --> School NewSchool optional
+  --> University newUniversity optional
 }
