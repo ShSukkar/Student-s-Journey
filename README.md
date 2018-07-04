@@ -26,12 +26,12 @@ It includes mainly the following components: School, university, Students, Trans
 
 ## Table of Contents
 1. [Getting Started](#Getting-Started)
-  1. [In order to test the network on your local machine](#In order to test the network on your local machine:)
-  1. [To create the REST API, run the following command:](#To create the REST API, run the following command:)
-  1. [The Last step:](#The Last step:)
-1. Credits
-  1. [Project's authers](#Project's authers)
-1. License
+  1. [In order to test the network on your local machine](#In-order-to-test-the-network-on-your-local-machine:)
+  1. [To create the REST API, run the following command:](#To-create-the-REST-API,-run-the-following-command:)
+  1. [The Last step:](#The-Last-step:)
+1. [Credits](#Credits)
+  1. [Project's authers](#Project's-authers)
+1. [License](#License)
 
 ## Getting Started
 ### In order to test the network on your local machine:
