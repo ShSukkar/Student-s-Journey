@@ -1,5 +1,4 @@
 # Student's Journey
-
 This web application mainly is a distributed ledger for students records. It enables schools, universities and companies to track the student’s journey of transfering from one school to another, or from a school to a university or from university to companies.
 It has been developed using blockchain technology (Hyperledger Fabric Composer), including Anglar4, express and couchDB. 
 
@@ -46,23 +45,22 @@ https://github.com/RbkCrypto/Schools-Network
 `composer archive create -t dir -n .`
 <img src="https://user-images.githubusercontent.com/36267291/40787989-a253335e-64f7-11e8-9d31-e96a4ba518eb.png" width="500" height="400" />
 4. Install the business network using this command:
-   composer network install --card PeerAdmin@hlfv1 --archiveFile schools-network@0.0.8.bna
+   `composer network install --card PeerAdmin@hlfv1 --archiveFile schools-network@0.0.8.bna`
    Note: schools-network is the name of this app network, you can name it as you prefer.
 <img src="https://user-images.githubusercontent.com/36267291/40788099-ea687d2a-64f7-11e8-9be2-95a1b453166f.png" width="600" height="400" />
 5. To start the business network run the following command (takes 1 - 3 minutes): 
-   composer  network start --networkName schools-network --networkVersion 0.0.8 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file networkadmin.card
+   `composer  network start --networkName schools-network --networkVersion 0.0.8 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file networkadmin.card`
 <img src="https://user-images.githubusercontent.com/36267291/40788118-f4003878-64f7-11e8-88d5-93d403cf0423.png" width="600" height="400" />
 6. To import the network administrator identity as a usable business network card, run the following command:
-   composer card import --file networkadmin.card
+   `composer card import --file networkadmin.card`
 <img src="https://user-images.githubusercontent.com/36267291/40788133-0059b04a-64f8-11e8-8407-9779abf35a35.png" width="600" height="400" />
 7. To check if the business network has been deployed successfully, run the following command to ping the network: 
-   composer network ping --card admin@schools-network
+   `composer network ping --card admin@schools-network`
 <img src="https://user-images.githubusercontent.com/36267291/40788239-46c8888a-64f8-11e8-9135-d2d3b7b8edd1.png" width="600" height="400" />
 
 ### To create the REST API, run the following command:
    `composer-rest-server`
-   
-   and then answer the questions that will appear as following :
+   and then answer the questions that will appear as following:
    
    1. Enter admin@schools-network as the card name.
    
@@ -83,7 +81,7 @@ This will start the angular application running against your REST API at http://
 
 
 ## Credits
-Project's authers are:
+#### Project's authers are:
 - [Atheer](https://github.com/Atheer83)
 - [Dareen](https://github.com/dareenkhanash)
 - [Hamzah](https://github.com/HamzaAlwan)
@@ -91,5 +89,4 @@ Project's authers are:
 - [Shatha](https://github.com/ShSukkar)
 
 ## License
-
 Apache License, Version 2.0 [the License](http://www.apache.org/licenses/LICENSE-2.0)
