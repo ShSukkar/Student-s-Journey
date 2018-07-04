@@ -26,11 +26,11 @@ It includes mainly the following components: School, university, Students, Trans
 
 ## Table of Contents
 1. [Getting Started](getting-started)
-  1. [In order to test the network on your local machine](#in-order-to-test-the-network-on-your-local-machine:)
-  1. [To create the REST API, run the following command:](tTo-create-the-REST-API,-run-the-following-command:)
-  1. [The Last step:](#the-last-step:)
+  1. [In order to test the network on your local machine](#in-order-to-test-the-network-on-your-local-machine)
+  1. [To create the REST API, run the following command](to-create-the-REST-API,-run-the-following-command)
+  1. [The Last step](#the-last-step)
 1. [Credits](#credits)
-  1. [Project's authers](#project's-authers)
+  1. [Project's authors](#project's-authors)
 1. [License](#license)
 
 ## Getting Started
@@ -88,7 +88,7 @@ This will start the angular application running against your REST API at http://
 
 
 ## Credits
-#### Project's authers are:
+#### Project's authors are:
 - [Atheer](https://github.com/Atheer83)
 - [Dareen](https://github.com/dareenkhanash)
 - [Hamzah](https://github.com/HamzaAlwan)
