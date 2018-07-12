@@ -91,7 +91,6 @@ https://github.com/RbkCrypto/Schools-Network
 
 ### The Last step:
 Navigate to school-app which is the client application (Angular4), then run the following command and the network will be ready to be used: 
-
 `npm start`
 
 This will start the angular application running against your REST API at http://localhost:4200
