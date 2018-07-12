@@ -50,7 +50,7 @@ https://github.com/RbkCrypto/Schools-Network
 
 3. The network should be packaged into a deployable archive by executing the command below, which will create the bna file in the current folder:
 
-`composer archive create -t dir -n .`
+   `composer archive create -t dir -n .`
 
 4. Install the business network using this command:
 
